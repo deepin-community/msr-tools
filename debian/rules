@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	make install sbindir=debian/msr-tools/usr/sbin
+	rm -f debian/msr-tools/usr/sbin/cpuid
